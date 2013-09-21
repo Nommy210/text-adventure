@@ -20,24 +20,6 @@ public class TextAdventure {
         String input;
         boolean gameRunning = true;
         
-        Monster goblin = new Monster();
-        
-        goblin.name = "Goblin";
-        goblin.hp = 50;
-        goblin.mp = 20;
-        goblin.str = 100;
-        goblin.def = 50;
-        goblin.mag = 1;
-        
-        Monster orc = new Monster();
-        
-        orc.name = "Orc";
-        orc.hp = 150;
-        orc.mp = 120;
-        orc.str = 200;
-        orc.def = 110;
-        orc.mag = 10;
-        
         print("Welcome to text adventure 64!");
         while (gameRunning) {
             // Display game information
@@ -64,9 +46,9 @@ public class TextAdventure {
                 input = getInputFromKeyboard();
                 
                 if (input.equals("goblin")) {
-                    print(goblin.describe());
+                    
                 } else if (input.equals("orc")) {
-                    print(orc.describe());
+                    
                 }
             }
         }
