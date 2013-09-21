@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Michael
+ * @author Jason
  */
 public class TextAdventure {
 
