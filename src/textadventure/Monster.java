@@ -10,14 +10,13 @@ package textadventure;
  */
 public class Monster {
     public String name;
-    public int hp, mp, str, def, mag;
+    public int hp, mp, str, con, mag;
     
     public String describe() {
         return "The " + name + " has " + hp + " hp and " + mp + " mp!";
     }
     
-    public void attack(Monster m) {
-        
+    public void attack(Character c) {
     }
     
     public String say(String s) {
