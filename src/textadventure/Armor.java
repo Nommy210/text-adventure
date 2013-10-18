@@ -10,5 +10,5 @@ package textadventure;
  */
 public class Armor {
     public String name;
-    public int arm, cost;
+    public int dfp, cost;
 }

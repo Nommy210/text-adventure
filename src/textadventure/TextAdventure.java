@@ -42,7 +42,6 @@ public class TextAdventure {
                 
                 if (input.equals(input)) {
                     print("You don't have any items!");
-                    print("What would you like to do?");
                     input = getInputFromKeyboard();
                 }
             } else if (input.equals("walk")) {
@@ -51,19 +50,15 @@ public class TextAdventure {
                 
                 if (input.equals("north")) {
                     print("The goblin blocks your path!");
-                    print("What would you like to do?");
                     input = getInputFromKeyboard();
                     } else if (input.equals("south")) {
                         print("The goblin blocks your path!");
-                        print("What would you like to do?");
                         input = getInputFromKeyboard();
                     } else if (input.equals("east")) {
-                        print("The goblin and orc block your path!");
-                        print("What would you like to do?");
+                        print("The goblin blocks your path!");
                         input = getInputFromKeyboard();
                     } else if (input.equals("west"));
-                        print("The goblin and orc block your path!");
-                        print("What would you like to do?");
+                        print("The goblin blocks your path!");
                         input = getInputFromKeyboard();
                         { 
                 }
