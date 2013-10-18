@@ -38,12 +38,7 @@ public class TextAdventure {
             if (input.equals("quit")) {
                 gameRunning = false;
             } else if (input.equals("use")) {
-                print("What item?");
-                
-                if (input.equals(input)) {
-                    print("You don't have any items!");
-                    input = getInputFromKeyboard();
-                }
+                print("You don't have any items!");
             } else if (input.equals("walk")) {
                 print("Which direction?");
                 input = getInputFromKeyboard();
@@ -51,16 +46,15 @@ public class TextAdventure {
                 if (input.equals("north")) {
                     print("The goblin blocks your path!");
                     input = getInputFromKeyboard();
-                    } else if (input.equals("south")) {
-                        print("The goblin blocks your path!");
-                        input = getInputFromKeyboard();
-                    } else if (input.equals("east")) {
-                        print("The goblin blocks your path!");
-                        input = getInputFromKeyboard();
-                    } else if (input.equals("west"));
-                        print("The goblin blocks your path!");
-                        input = getInputFromKeyboard();
-                        { 
+                } else if (input.equals("south")) {
+                    print("The goblin blocks your path!");
+                    input = getInputFromKeyboard();
+                } else if (input.equals("east")) {
+                    print("The goblin blocks your path!");
+                    input = getInputFromKeyboard();
+                } else if (input.equals("west")) {
+                    print("The goblin blocks your path!");
+                    input = getInputFromKeyboard();
                 }
             } else if (input.equals("look")) {
                 print("What do you want to look at?");
@@ -68,22 +62,36 @@ public class TextAdventure {
                 
                 if (input.equals("goblin")) {
                     print("The goblin glares at you.");
-                    print("What would you like to do?");
-                    input = getInputFromKeyboard();
-                    if (input.equals("talk")) {
-                        print("Goblin says, 'Herpety derpderp herpderp derp!'");
-                        print("Retarded goblin dies.");
-                        if (input.equals("look")) {
-                            print("You find a knife on the retarded goblin.");
-                        }
-                        
-                    }
                 }
-            } if (input.equals(input));{
-                print("I do not understand that command.");
+            } else if (input.equals("talk")) {
+                print("What do you want to talk to?");
                 input = getInputFromKeyboard();
+                
+                if (input.equals("goblin")) {
+                    print("Goblin says, 'Herpety derpderp herpderp derp!'");
+                    print("Retarded goblin dies.");
+                }
+            } else {
+                print("I do not understand that command.");
+            }
         }
-        }
+    }
+    
+    public static void battleTest() {
+        Party party = new Party();
+        Character mike = new Character();
+        Character jason = new Character();
+        Monster orc = new Monster();
+        Monster goblin = new Monster();
+        
+        party.addMember(mike);
+        party.addMember(jason);
+        
+        BattleManager battle = new BattleManager(party);
+        battle.addMonsterToFight(goblin);
+        battle.addMonsterToFight(orc);
+        
+        battle.fight();
     }
     
     public static void printMenu() {

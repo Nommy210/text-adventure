@@ -8,7 +8,7 @@ package textadventure;
  *
  * @author Christopher
  */
-public class Items {
+public class Weapon {
     public String name;
-    public int effect, cost;
+    public int att, cost;
 }
